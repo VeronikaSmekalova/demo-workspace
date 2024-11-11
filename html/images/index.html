@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <Title>Svatebni stranka</Title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+:root{
+    --default-font-size: 16px;
+    --font-color:grey;
+    --basic-color:black;
+    --backgroundcolor:#EEFFEA;
+    --backgroundcolor2:rgb(105, 136, 105);
+    --font-weight:lighter;
+    --font-family:'Lucida Sans';
+}
+html {
+font-size:var(--default-font-size);
+font-color:var(--font-color);
+font-weight: var(--font-weight);
+font-family:var(--font-family);
+}
+*, *:before, *:after {
+box-sizing: border-box;
+}
+body {
+margin: 0;
+padding: 0;
+}
+header a{color:var(--backgroundcolor2);
+        &:hover{color:var(--basic-color);}
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.logo{
+    width: 40vh;
+    position:relative;
+    top:30px;
+    left:300px;
+}
+li{
+    display: inline-block;
+    padding:10px;}
+a{
+    text-decoration:none;
+    
+}
+.button{
+    width:160px;
+    height:30px;
+    border:1px solid;
+    border-color: black;
+    border-radius: 25px;
+    background-color: white;
+    line-height: 0px;
+    right:15px;
+    top: 90px;
+    position:fixed;
+    padding-left: 10px;
+    padding-bottom: 30px;
+    &:hover{background-color: var(--backgroundcolor);
+
+    }
+}
+h1{
+    text-align: center;
+    letter-spacing: 3px;
+}
+p{
+    text-align: justify;
+}
+.section2{
+    background-color: var(--backgroundcolor);
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;}
+
+table{
+    width: 75%;
+    margin:auto;
+    border-collapse: collapse;
+}
+td{
+    font-size: 0.5rem;
+    text-align: center;
+
+}
+footer{
+    background-color: var(--backgroundcolor2);
+    padding: 4rem;
+    text-align: center;
+}
+#contact{text-align: center;}
+#email{text-align: center;}
+</style>
+    </head>
+
+    <body>
+        <header>
+            <div>
+                <img class="logo" src="farma-dvorec_final-jpg.jpg.png" alt="Logo farmy Dvorec">
+            </div>
+            <div>
+
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#farma">Farma</a>
+                    </li>
+                    <li>
+                        <a href="#lease">Pronájem</a>
+                    </li>
+                    <li>
+                        <a href="#gallery">Galerie</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#contact">Kontakt</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="button">
+                <p>Chci si vybrat termín</p>
+            </div> 
+            </div>
+            
+        </header>
+        <main>
+            <img class="Farma" src="Pohled z výšky_2_mini.jpg" alt="Pohled z výšky na Farmu Dvorec">
+            <article>
+                <section>
+                    <h1 id="farma">Farma</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis aspernatur impedit veniam quod aliquam dolor voluptates iure ipsa repellat repellendus voluptas nihil culpa reiciendis, fugiat cumque officiis dicta! Tempore, ut.</p>
+                </section>
+                <section class="section2">
+                    <h1 id="lease">Pronájem</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum consequatur esse earum quis repellendus necessitatibus nulla illo minus numquam temporibus nobis ratione accusamus beatae, ab consequuntur, id corporis optio autem.</p>
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <td>Cena pronájmu</td>
+                                <td>Duben, Květen, Září, Říjen</td>
+                                <td>Červen, Červenec, Srpen</td>
+                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Úterý - Čtvrtek</td>
+                                <td>49 999 Kč</td>
+                                <td>59 999 Kč</td>
+                            
+                            </tr>
+                        
+                            <tr>
+                                <td>Pátek - Neděle</td>
+                                <td>59 999 Kč</td>
+                                <td>89 999 Kč</td>
+                            </tr>
+                        </tbody>
+                        
+                    </table>
+                </section>
+                <section>
+                    <h1 id="gallery">
+                        Galerie
+                    </h1>
+                    <div class="wedding_bridesmaids" ><img src="https://svetylkov.cz/wp-content/uploads/2023/12/Svatba-bez-deti.jpg" alt="Nevěsta s družičkami"></div>
+                    <img sclass="married_couple" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe9f0cWDiAKO7mrRvyHV4OuKIq_1H46XQQXsNsWf5UtUy8u0kuYILQmw3XPGVl-iD_hUk&usqp=CAU" alt="Novomanželé">
+                    <img sclass="night_wedding" src="https://www.tvojeharmony.sk/wp-content/uploads/2022/06/742x482_01.png" alt="Večerní svatební obřad">
+                    <img sclass="wedding_table" src="https://www.svatbanavenkove.cz/files/.thumbs/images/obrazky/fotogalerie/_255.jpeg" alt="Svatební tabule">
+                    <img sclass="raut" src="https://www.svatbanavenkove.cz/files/.thumbs/images/obrazky/fotogalerie/517_DSC02357.jpg" alt="Venkovský raut">
+                    <img sclass="cheers" src="https://www.svatbanavenkove.cz/files/.thumbs/images/obrazky/fotogalerie/2019-08-3111-51-27_MG_2439.jpg" alt="Přípitek">
+                    <img sclass="band" src="https://www.svatbanavenkove.cz/files/images/obrazky/fotogalerie/514_DSC02353.jpg" alt="Kapela">
+
+                </section>
+                
+            </article>
+        </main>
+        
+        <footer>
+            <p id="contact">Kontakt</p>
+            <address>
+                Janovského 14
+                <br>Praha 7
+            </address>
+            <p id="email">Email:
+            <a href="mailto:mokosova.veronika@seznam.cz">mokosova.veronika@seznam.cz</a></p>
+        </footer>  
+       
+             
+    </body>
+</html>
+            
+        
+            
+
+
+    
+
+
+

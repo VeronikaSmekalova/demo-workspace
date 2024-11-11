@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formulář</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root{
+            --default-font-size: 16px;
+            --font-color:grey;
+            --backgroundcolor:#EEFFEA;
+            --font-weight:lighter;
+            --font-family:'Lucida Sans';
+        }
+        html {
+        font-size:var(--default-font-size);
+        font-color:var(--font-color);
+        font-weight: var(--font-weight);
+        font-family:var(--font-family);
+        }
+        *, *:before, *:after {
+        box-sizing: border-box;
+        }
+        body {
+        margin: 0;
+        padding: 0;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        
+        .logo{
+            width: 20vh;
+            top:30px;
+        }
+        li{
+            display: inline-block;
+            padding:10px;}
+        a{
+            text-decoration:none;
+            
+        }
+        .button{
+            width:160px;
+            height:30px;
+            border:1px solid;
+            border-color: black;
+            border-radius: 25px;
+            background-color: white;
+            line-height: 0px;
+            right:15px;
+            top: 90px;
+            position:fixed;
+            padding-left: 10px;
+            padding-bottom: 30px;
+            &:hover{background-color: var(--backgroundcolor);
+        
+            }
+        }
+        h1{
+            text-align: center;
+            letter-spacing: 3px;
+        }
+        p{
+            text-align: justify;
+        }
+        .section2{
+            background-color: var(--backgroundcolor);
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;}
+        
+        form{
+            width: 75%;
+            margin:auto;
+            display:block;
+        }
+        
+        </style>
+</head>
+<body>
+    <form>
+   
+        
+            <label for="name"> Jméno a příjmení*
+            <input id="name" type="text" name="name" required>
+            <label for="email"> Email*
+            <input id="email" type="email" name="email" placeholder="jméno@email.cz" required>
+            <label for="phonenumber"> Telefon*
+            <input id="phonenumber" type="phonenumber" name="phonenumber" placeholder="+420111222333" required>
+            <label for="wedding-date"> Termín svatby*
+            <input id="wedding-date" type="date" name="weddingdate" required>
+
+            <fieldset>
+                <legend>Zvolte povahu rezervace*</legend>
+                <label for="pre-booking" class="checkbox-and-radio-label">
+                <input id="pre-booking" type="radio" name="booking-option" value="pre" required>
+                Předběžná rezervace
+                </label>
+                <label for="fix-booking" class="checkbox-and-radio-label">
+                <input id="fix-booking" type="radio" name="booking-option" value="fix" required checked>
+                Fixní rezervace
+                </label>
+            </fieldset>
+
+            <form action="#" method="post">
+                <label for="comment">Poznámka</label>
+                <textarea id="comment" name="comment" rows="5">
+                </textarea>
+            </form>
+
+            <label for="agree" class="checkbox-and-radio-label">
+            <input id="agree" type="checkbox" name="agree" value="fix" required>
+                Souhlasím se zpracováním osobních údajů*
+            </label>
+            <input type="submit" value="Uložit rezervaci">
+
+            
+            
+
+
+                
+            
+
+        
+
+    </form>
+
+</body>
+</html>
