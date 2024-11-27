@@ -72,25 +72,48 @@
             padding-left: 20px;
             padding-right: 20px;}
         
-        form{
-            width: 75%;
+        .form{
+            width: 35%;
+            max-width:500px;
             margin:auto;
-            display:block;
+            display:flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+            padding: 10px;
+            border: 1px solid #ccc; /* Okraj formuláře */
+            border-radius: 8px; /* Zaoblení rohů */
+            background-color: #f9f9f9;
+            
+        
+            
+        
+}
+        .error{
+            opacity: 0;
+            color: red;
+            margin-top: 5px;
+            transition: all 0.3s ease-in-out;
         }
         
         </style>
 </head>
 <body>
-    <form>
-   
-        
-            <label for="name"> Jméno a příjmení*
+    <form class="form" id="myForm" action="#" method="post" novalidate>
+
+            <label for="name"> Jméno a příjmení*</label>
             <input id="name" type="text" name="name" required>
-            <label for="email"> Email*
+            <span id="nameError" class="error">Uveďte jméno a příjmení</span>
+
+            <label for="email"> Email*</label>
             <input id="email" type="email" name="email" placeholder="jméno@email.cz" required>
-            <label for="phonenumber"> Telefon*
+            <span id="emailError" class="error">Uveďte email</span>
+
+            <label for="phonenumber"> Telefon*</label>
             <input id="phonenumber" type="phonenumber" name="phonenumber" placeholder="+420111222333" required>
-            <label for="wedding-date"> Termín svatby*
+            
+            <label for="wedding-date"> Termín svatby*</label>
             <input id="wedding-date" type="date" name="weddingdate" required>
 
             <fieldset>
@@ -105,17 +128,18 @@
                 </label>
             </fieldset>
 
-            <form action="#" method="post">
+            
                 <label for="comment">Poznámka</label>
                 <textarea id="comment" name="comment" rows="5">
                 </textarea>
-            </form>
+            
 
             <label for="agree" class="checkbox-and-radio-label">
             <input id="agree" type="checkbox" name="agree" value="fix" required>
-                Souhlasím se zpracováním osobních údajů*
-            </label>
-            <input type="submit" value="Uložit rezervaci">
+                Souhlasím se zpracováním osobních údajů*</label>
+
+            
+            <button type="submit">Uložit rezervaci</button>
 
             
             
@@ -127,6 +151,52 @@
         
 
     </form>
+    <script>
+        const form=document.querySelector('#myForm')
 
+        console.log(form)
+        form.addEventListener('submit' , (event)=> {
+            console.log(event)
+            event.preventDefault()
+
+           let isValid=true
+
+            const inputs = form.querySelectorAll('input')
+            inputs.forEach(input => {
+                if (input.name==="name"){
+                const error = form.querySelector('#nameError')
+                if (input.value.length < 5) {
+                    isValid=false
+                    error.style.opacity = 1
+                    if (input.value.length === 0) {
+                        error.textContent = "Zadejte jméno a příjmení"
+                    } else {
+                        error.textContent = "Jméno musí mít alespoň 5 písmen"
+                    }
+                    
+                } else {
+                    error.style.opacity = 0
+                }
+                }
+                if (input.name === 'email') {
+                    const error = form.querySelector ('#emailError')
+                    if (null === input.value.match(/^[a-z0-9\.\-_]+@[a-z0-9\.\-]+\.[a-z0-9]+$/i)) {
+                        isValid=false
+                        error.style.opacity = 1
+                    } else {
+                        error.style.opacity = 0
+                    }
+
+                }
+            })
+           
+            if (isValid) {
+            event.target.submit()
+        }
+            
+        })
+
+        
+    </script>
 </body>
 </html>
